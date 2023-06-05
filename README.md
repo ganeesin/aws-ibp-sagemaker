@@ -3,11 +3,12 @@ SAP IBP External forecasting allows customers to use external forecasting algori
 The data exchange is done through an OData Service, and the external algorithm can be written in R, Python or any other suitable tools. In this sample, We have used services like API Gateway , Lambda and Sagemaker to provide synchronous forecasting in IBP.
 
 ## Architecture
-![architecture](/External_forecasting.png)
+![architecture](/External_Forecasting.png)
 
 
 ## SAP IBP integration pattern
  The architecture uses the standard documentation provided by SAP OSS note 3170544 and the steps outlined in this [Blog]( https://blogs.sap.com/2022/05/11/how-to-forecast-using-custom-external-algorithms/)   
+
 ![Architecture](/IBP_Architecture.png)
 
 
@@ -60,7 +61,7 @@ The `appConfig.json` file takes the input paramters for the stack. Maintain the 
 * `subnet`  Enter the subnet for Lambda exection
 ## Resource Identifiers
 * `stackname` Enter an Identifier/Name for the CDK stack
-* `ddbtablename` Enter a name for Dynamo DB Table that would be created as part of the stack which would hold the metadata for creating incidents in SAP
+* `ddbtablename` Enter a name for Dynamo DB Table that would be created as part of the stack which would hold the request ID's from SAP IBP.
 ## SAP Environnment details
 * `SAP_AUTH_SECRET` Provide the arn where the credentials with keys `user` and `password` and `url ` for accessing SAP IBP OData services.
 
